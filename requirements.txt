@@ -1,0 +1,8 @@
+mediapipe
+opencv-python
+pandas
+scikit-learn
+mlflow
+matplotlib
+seaborn
+jupyter
