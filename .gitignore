@@ -1,0 +1,12 @@
+# Ignore datasets
+*.csv
+*.zip
+
+# Ignore MLflow runs folder
+mlruns/
+
+# Ignore Python cache and environment
+__pycache__/
+.ipynb_checkpoints/
+.env
+venv/
