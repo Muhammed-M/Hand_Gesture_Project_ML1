@@ -5,6 +5,7 @@
 # Ignore MLflow runs folder
 mlruns/
 Test.py
+output_recording.mp4
 
 # Ignore Python cache and environment
 __pycache__/
