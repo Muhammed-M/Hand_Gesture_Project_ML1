@@ -4,6 +4,7 @@
 
 # Ignore MLflow runs folder
 mlruns/
+Test.py
 
 # Ignore Python cache and environment
 __pycache__/
