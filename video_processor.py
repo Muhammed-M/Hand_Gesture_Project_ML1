@@ -12,7 +12,7 @@ import numpy as np
 from drawing import draw_custom_skeleton, draw_hand_box_with_label, hand_bbox_from_landmarks
 
 # --- CONFIGURATION ---
-MODEL_PATH = Path("models") / "SVM1_RawZ_noRobScale.pkl"
+MODEL_PATH = Path("models") / "SVM1.4_noZvalue_noStdScale_Angle_model.pkl"
 OUTPUT_VIDEO_PATH = "output_recording.mp4" # <--- NEW: Output file name
 PREDICTION_WINDOW = 5
 TARGET_WIDTH = 640
@@ -118,9 +118,9 @@ def main():
         print(f"Failed to load model from '{MODEL_PATH}': {exc}")
         return
 
-    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    cap = cv2.VideoCapture('VID_20260217_212749.mp4')
     if not cap.isOpened():
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture('VID_20260217_212749.mp4')
     if not cap.isOpened():
         print("Failed to open webcam (index 0).")
         return
@@ -134,7 +134,7 @@ def main():
     # We must get the *actual* size the camera provided (it might reject 640x480)
     actual_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     actual_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    fps_out = 10 # Fixed FPS for output video
+    fps_out = 20 # Fixed FPS for output video
     
     fourcc = cv2.VideoWriter_fourcc(*'mp4v') # Codec for .mp4
     out = cv2.VideoWriter(OUTPUT_VIDEO_PATH, fourcc, fps_out, (actual_width, actual_height))
@@ -209,7 +209,7 @@ def main():
 
                     # Smoothing
                     label_for_buffer = str(prediction)
-                    color = (0, 220, 0)
+                    color = (230, 216, 173)
                     buffer_key = hand_label
                     prediction_buffers[buffer_key].append(label_for_buffer)
                     stable_prediction = stable_vote(prediction_buffers[buffer_key])

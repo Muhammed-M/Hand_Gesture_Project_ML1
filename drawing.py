@@ -17,8 +17,8 @@ PALM_CONNECTIONS = (
     (17, 0),
 )
 
-SKELETON_GREEN = (20, 225, 40)
-JOINT_RED = (40, 40, 255)
+SKELETON_COLOR = (20, 20, 20)
+JOINT_COLOR = (40, 40, 255)
 
 
 def _style_for_detail(detail_level):
@@ -60,14 +60,14 @@ def draw_custom_skeleton(image, hand_landmarks, detail_level="full"):
             (start_x, start_y),
             (end_x, end_y),
             (20, 20, 20),
-            style["line_thickness"] + 2,
+            style["line_thickness"],
             cv2.LINE_AA,
         )
         cv2.line(
             image,
             (start_x, start_y),
             (end_x, end_y),
-            SKELETON_GREEN,
+            SKELETON_COLOR,
             style["line_thickness"],
             cv2.LINE_AA,
         )
@@ -77,7 +77,7 @@ def draw_custom_skeleton(image, hand_landmarks, detail_level="full"):
         cx, cy = int(lm.x * w), int(lm.y * h)
         radius = style["joint_radius"]
         cv2.circle(image, (cx, cy), radius + 2, (20, 20, 20), cv2.FILLED, cv2.LINE_AA)
-        cv2.circle(image, (cx, cy), radius, JOINT_RED, cv2.FILLED, cv2.LINE_AA)
+        cv2.circle(image, (cx, cy), radius, JOINT_COLOR, cv2.FILLED, cv2.LINE_AA)
 
 
 def hand_bbox_from_landmarks(frame_shape, hand_landmarks, pad=14):
