@@ -1,5 +1,6 @@
 import math
 import time
+import pandas as pd
 from collections import Counter, defaultdict, deque
 from pathlib import Path
 
@@ -118,9 +119,9 @@ def main():
         print(f"Failed to load model from '{MODEL_PATH}': {exc}")
         return
 
-    cap = cv2.VideoCapture('VID_20260217_212749.mp4')
+    cap = cv2.VideoCapture(0)
     if not cap.isOpened():
-        cap = cv2.VideoCapture('VID_20260217_212749.mp4')
+        cap = cv2.VideoCapture(0)
     if not cap.isOpened():
         print("Failed to open webcam (index 0).")
         return
@@ -195,7 +196,13 @@ def main():
                     draw_custom_skeleton(frame, hand_landmarks, detail_level="full")
 
                     # Extract & Predict
+                    with open('feature_names.txt', 'r') as f :
+                        feature_names = f.read().split(',')
+
                     input_data = extract_features(hand_landmarks)
+
+                    input_data = pd.DataFrame(input_data, columns=feature_names) # Ensure correct feature order
+                    
                     prediction = model.predict(input_data)[0]
 
                     # Handle Hand Label (Left/Right)
@@ -219,6 +226,14 @@ def main():
                     box_label = f"{stable_prediction} | {hand_text}"
                     bbox = hand_bbox_from_landmarks(frame.shape, hand_landmarks)
                     draw_hand_box_with_label(frame, bbox, box_label, color)
+
+                    y = 65 + idx * 28
+
+                    cv2.putText(
+                    frame, f"{hand_label.title()} Hand | {stable_prediction.title()}", (12, y),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (190, 190, 190), 2, cv2.LINE_AA
+                )
+                    
             else:
                 cv2.putText(
                     frame, "Waiting for hand...", (12, 65),
