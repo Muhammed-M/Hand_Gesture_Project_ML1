@@ -6,7 +6,6 @@
 mlruns/
 Test.py
 output_recording.mp4
-VID_20260217_212749.mp4
 
 # Ignore Python cache and environment
 __pycache__/

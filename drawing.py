@@ -59,7 +59,7 @@ def draw_custom_skeleton(image, hand_landmarks, detail_level="full"):
             image,
             (start_x, start_y),
             (end_x, end_y),
-            (20, 20, 20),
+            (255, 255, 255),
             style["line_thickness"],
             cv2.LINE_AA,
         )
@@ -76,7 +76,7 @@ def draw_custom_skeleton(image, hand_landmarks, detail_level="full"):
     for lm in hand_landmarks.landmark:
         cx, cy = int(lm.x * w), int(lm.y * h)
         radius = style["joint_radius"]
-        cv2.circle(image, (cx, cy), radius + 2, (20, 20, 20), cv2.FILLED, cv2.LINE_AA)
+        cv2.circle(image, (cx, cy), radius + 2, (255, 255, 255), cv2.FILLED, cv2.LINE_AA)
         cv2.circle(image, (cx, cy), radius, JOINT_COLOR, cv2.FILLED, cv2.LINE_AA)
 
 

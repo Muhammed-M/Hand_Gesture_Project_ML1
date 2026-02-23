@@ -13,7 +13,7 @@ import numpy as np
 from drawing import draw_custom_skeleton, draw_hand_box_with_label, hand_bbox_from_landmarks
 
 # --- CONFIGURATION ---
-MODEL_PATH = Path("models") / "SVM1.4_noZvalue_noStdScale_Angle_model.pkl"
+MODEL_PATH = Path("models/SVM1.4_noZvalue_noStdScale_Angle_model.pkl")
 OUTPUT_VIDEO_PATH = "output_recording.mp4" # <--- NEW: Output file name
 PREDICTION_WINDOW = 5
 TARGET_WIDTH = 640
@@ -148,8 +148,8 @@ def main():
         static_image_mode=False,
         max_num_hands=MAX_NUM_HANDS,
         model_complexity=MODEL_COMPLEXITY,
-        min_detection_confidence=0.5,
-        min_tracking_confidence=0.5,
+        min_detection_confidence=0.7,
+        min_tracking_confidence=0.7,
     )
 
     fps_ema = 0.0
