@@ -1,1 +1,0 @@
-[('scaler', RobustScaler()), ('svc', SVC(C=100, class_weight='balanced'))]
