@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/ITI/Machine%20Learning/project/Hand_Gesture_Project/mlruns/934111512580124014/d69ebae3e4134f6f8c3e8d4add294a6c/artifacts
+end_time: 1771275343999
+entry_point_name: ''
+experiment_id: '934111512580124014'
+lifecycle_stage: active
+run_id: d69ebae3e4134f6f8c3e8d4add294a6c
+run_name: Random Forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771275299113
+status: 3
+tags: []
+user_id: Asus

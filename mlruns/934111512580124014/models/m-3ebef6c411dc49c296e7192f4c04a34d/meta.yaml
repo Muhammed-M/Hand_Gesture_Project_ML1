@@ -1,0 +1,10 @@
+artifact_location: file:///d:/ITI/Machine%20Learning/project/Hand_Gesture_Project/mlruns/934111512580124014/models/m-3ebef6c411dc49c296e7192f4c04a34d/artifacts
+creation_timestamp: 1771274718997
+experiment_id: '934111512580124014'
+last_updated_timestamp: 1771274723718
+model_id: m-3ebef6c411dc49c296e7192f4c04a34d
+model_type: null
+name: model
+source_run_id: 55b03a17d85a43e8ac04728c0888d8fb
+status: 2
+status_message: null

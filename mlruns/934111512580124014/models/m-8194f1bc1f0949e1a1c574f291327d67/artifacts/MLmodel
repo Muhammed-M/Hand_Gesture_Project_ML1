@@ -1,0 +1,77 @@
+artifact_path: file:///d:/ITI/Machine%20Learning/project/Hand_Gesture_Project/mlruns/934111512580124014/models/m-8194f1bc1f0949e1a1c574f291327d67/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.25
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-8194f1bc1f0949e1a1c574f291327d67
+model_size_bytes: 1513912
+model_uuid: m-8194f1bc1f0949e1a1c574f291327d67
+prompts: null
+run_id: 680d724476de400ca210b962cb628ca8
+signature:
+  inputs: '[{"type": "double", "name": "x0", "required": true}, {"type": "double",
+    "name": "y0", "required": true}, {"type": "double", "name": "z0", "required":
+    true}, {"type": "double", "name": "x1", "required": true}, {"type": "double",
+    "name": "y1", "required": true}, {"type": "double", "name": "z1", "required":
+    true}, {"type": "double", "name": "x2", "required": true}, {"type": "double",
+    "name": "y2", "required": true}, {"type": "double", "name": "z2", "required":
+    true}, {"type": "double", "name": "x3", "required": true}, {"type": "double",
+    "name": "y3", "required": true}, {"type": "double", "name": "z3", "required":
+    true}, {"type": "double", "name": "x4", "required": true}, {"type": "double",
+    "name": "y4", "required": true}, {"type": "double", "name": "z4", "required":
+    true}, {"type": "double", "name": "x5", "required": true}, {"type": "double",
+    "name": "y5", "required": true}, {"type": "double", "name": "z5", "required":
+    true}, {"type": "double", "name": "x6", "required": true}, {"type": "double",
+    "name": "y6", "required": true}, {"type": "double", "name": "z6", "required":
+    true}, {"type": "double", "name": "x7", "required": true}, {"type": "double",
+    "name": "y7", "required": true}, {"type": "double", "name": "z7", "required":
+    true}, {"type": "double", "name": "x8", "required": true}, {"type": "double",
+    "name": "y8", "required": true}, {"type": "double", "name": "z8", "required":
+    true}, {"type": "double", "name": "x9", "required": true}, {"type": "double",
+    "name": "y9", "required": true}, {"type": "double", "name": "z9", "required":
+    true}, {"type": "double", "name": "x10", "required": true}, {"type": "double",
+    "name": "y10", "required": true}, {"type": "double", "name": "z10", "required":
+    true}, {"type": "double", "name": "x11", "required": true}, {"type": "double",
+    "name": "y11", "required": true}, {"type": "double", "name": "z11", "required":
+    true}, {"type": "double", "name": "x12", "required": true}, {"type": "double",
+    "name": "y12", "required": true}, {"type": "double", "name": "z12", "required":
+    true}, {"type": "double", "name": "x13", "required": true}, {"type": "double",
+    "name": "y13", "required": true}, {"type": "double", "name": "z13", "required":
+    true}, {"type": "double", "name": "x14", "required": true}, {"type": "double",
+    "name": "y14", "required": true}, {"type": "double", "name": "z14", "required":
+    true}, {"type": "double", "name": "x15", "required": true}, {"type": "double",
+    "name": "y15", "required": true}, {"type": "double", "name": "z15", "required":
+    true}, {"type": "double", "name": "x16", "required": true}, {"type": "double",
+    "name": "y16", "required": true}, {"type": "double", "name": "z16", "required":
+    true}, {"type": "double", "name": "x17", "required": true}, {"type": "double",
+    "name": "y17", "required": true}, {"type": "double", "name": "z17", "required":
+    true}, {"type": "double", "name": "x18", "required": true}, {"type": "double",
+    "name": "y18", "required": true}, {"type": "double", "name": "z18", "required":
+    true}, {"type": "double", "name": "x19", "required": true}, {"type": "double",
+    "name": "y19", "required": true}, {"type": "double", "name": "z19", "required":
+    true}, {"type": "double", "name": "x20", "required": true}, {"type": "double",
+    "name": "y20", "required": true}, {"type": "double", "name": "z20", "required":
+    true}, {"type": "double", "name": "Thumb_Joint_Angle", "required": true}, {"type":
+    "double", "name": "Index_Joint_Angle", "required": true}, {"type": "double", "name":
+    "Middle_Joint_Angle", "required": true}, {"type": "double", "name": "Ring_Joint_Angle",
+    "required": true}, {"type": "double", "name": "Pinky_Joint_Angle", "required":
+    true}, {"type": "double", "name": "Thumb_Index_Spread", "required": true}, {"type":
+    "double", "name": "Index_Middle_Spread", "required": true}, {"type": "double",
+    "name": "Middle_Ring_Spread", "required": true}, {"type": "double", "name": "Ring_Pinky_Spread",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "object", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-02-16 21:53:51.821612'

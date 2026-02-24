@@ -119,7 +119,7 @@ def main():
         print(f"Failed to load model from '{MODEL_PATH}': {exc}")
         return
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture('Input Video\WIN_20260224_01_27_14_Pro.mp4')
     if not cap.isOpened():
         cap = cv2.VideoCapture(0)
     if not cap.isOpened():
@@ -231,13 +231,13 @@ def main():
 
                     cv2.putText(
                     frame, f"{hand_label.title()} Hand | {stable_prediction.title()}", (12, y),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (190, 190, 190), 2, cv2.LINE_AA
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2, cv2.LINE_AA
                 )
                     
             else:
                 cv2.putText(
                     frame, "Waiting for hand...", (12, 65),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (190, 190, 190), 2, cv2.LINE_AA
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,255 , 255), 2, cv2.LINE_AA
                 )
 
             hands_count = len(results.multi_hand_landmarks) if results.multi_hand_landmarks else 0

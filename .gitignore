@@ -3,7 +3,7 @@
 *.zip
 
 # Ignore MLflow runs folder
-mlruns/
+Input Video/
 Test.py
 output_recording.mp4
 

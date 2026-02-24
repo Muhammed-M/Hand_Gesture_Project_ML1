@@ -134,9 +134,3 @@ Main packages:
   - Bounding box + label drawing helpers
 - `mlflow_utils.py`
   - Experiment setup and autologging helper
-
-## Notes
-
-- The dataset file (`hand_landmarks_data.csv`) is not included in this repository (ignored by `.gitignore`).
-- The script is configured for webcam index `0`.
-- The project supports up to 2 detected hands simultaneously.
